@@ -15,3 +15,12 @@ const resolvers = {
     info: () => `API for Hackernews`
   }
 }
+
+// Bundle schema and resolvers
+const server = new GraphQLServer({
+  typeDefs,
+  resolvers,
+})
+
+// Start Server
+server.start(() => console.log(`Server is running on http://localhost:4000`))
