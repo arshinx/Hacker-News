@@ -8,3 +8,10 @@ type Query {
   info: String!
 }
 `
+
+// Implementation of the GraphQL Schema
+const resolvers = {
+  Query: {
+    info: () => `API for Hackernews`
+  }
+}
